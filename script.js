@@ -37,7 +37,7 @@ document.querySelector('.heart').addEventListener('click', function() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   
-    document.getElementById("countdown").textContent = `Nueva carta en: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    document.getElementById("countdown").textContent = `Nueva carta en: ${hours}h ${minutes}m ${seconds}s`;
   
     localStorage.setItem('countDownDate', countDownDate.toString());
     //localStorage.clear();
