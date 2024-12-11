@@ -32,12 +32,12 @@ document.querySelector('.heart').addEventListener('click', function() {
     var now = new Date().getTime();
     var distance = countDownDate - now;
   
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24)*0);
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   
-    document.getElementById("countdown").textContent = `Nueva carta en: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    document.getElementById("countdown").textContent = `Nueva carta en: ${hours}h ${minutes}m ${seconds}s`;
   
     localStorage.setItem('countDownDate', countDownDate.toString());
     //localStorage.clear();
